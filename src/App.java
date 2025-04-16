@@ -16,7 +16,7 @@ public class App {
         personas[6] = new Persona(107, "Pedro");
 
         MetodosBusqueda mB = new MetodosBusqueda(personas);
-        
+        mB.showPersonByName();
 
 
         /*
