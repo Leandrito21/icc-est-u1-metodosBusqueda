@@ -1,6 +1,9 @@
+//  BUSQUEDAD LINEAL O SECUENCIAL
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
 import controllers.MetodosBusqueda;
+import controllers.MetodosBusquedaBinaria;
 import models.Persona;
 import views.ShowConsole;
 
@@ -15,8 +18,12 @@ public class App {
         personas[5] = new Persona(106, "Sofia");
         personas[6] = new Persona(107, "Pedro");
 
-        MetodosBusqueda mB = new MetodosBusqueda(personas);
-        mB.showPersonByName();
+        //MetodosBusqueda mB = new MetodosBusqueda(personas);
+        //mB.showPersonByName();
+        MetodosBusquedaBinaria mBB = new MetodosBusquedaBinaria(personas);
+        mBB.showPersonByCode();
+        mBB.showPersonByName();
+
 
 
         /*
@@ -50,3 +57,6 @@ public class App {
     }
 
 }
+// En busqueda lineal no es necesario que el arreglo este ordenado 
+//Pregunta de Prueba: ¿que es lo que hace que sean menos comparaciones?, que esta divido el arreglo 
+//sacar la mitad (alto + bajo)/2 para cacular el idice del punto central del array
